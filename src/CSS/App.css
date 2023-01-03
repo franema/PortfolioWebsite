@@ -2,13 +2,16 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: 'Press Start 2P', cursive;
 }
 
 html {
-background-image: url("../img/marble_background.jpg");}
+    /* background-image: url("../img/marble_background.jpg"); */
+    background-color: black;
+}
 
 body {
-    background-color: rgba(159, 160, 160, 0.747);
+    /* background-color: rgba(134, 104, 190, 0.692); */
     margin: 2% 10%;
     padding: 0 2%;
     min-height: 90vh;
