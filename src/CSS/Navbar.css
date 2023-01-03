@@ -4,3 +4,8 @@
     align-items: center;
     padding: 1% 0;
 }
+
+.navbar>* {
+    text-decoration: none;
+    color: black;
+}
