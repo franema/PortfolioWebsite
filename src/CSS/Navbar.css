@@ -1,11 +1,16 @@
 .navbar {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     padding: 1% 0;
 }
 
 .navbar>* {
     text-decoration: none;
-    color: black;
+    color: rgb(236, 236, 236);
+    padding: 1%;
+}
+
+.navbar>*:hover {
+    background-color: rgb(86, 2, 143);
 }
