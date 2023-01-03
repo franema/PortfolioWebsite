@@ -5,12 +5,12 @@
 }
 
 html {
-    background-color: aquamarine;
-}
+background-image: url("../img/marble_background.jpg");}
 
 body {
-    background-color: rgb(159, 160, 160);
+    background-color: rgba(159, 160, 160, 0.747);
     margin: 2% 10%;
     padding: 0 2%;
     min-height: 90vh;
+    border-radius: 6px;
 }
