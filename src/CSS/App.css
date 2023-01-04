@@ -6,14 +6,16 @@
 }
 
 html {
-    /* background-image: url("../img/marble_background.jpg"); */
+    background-image: url("../img/marble_background.jpg");
     background-color: black;
+    background-attachment: fixed;
+    background-size: cover;
 }
 
 body {
-    /* background-color: rgba(134, 104, 190, 0.692); */
+    background-color: rgba(134, 104, 190, 0.692);
     margin: 2% 10%;
     padding: 0 2%;
-    min-height: 90vh;
     border-radius: 6px;
+    min-height: 90vh;
 }
