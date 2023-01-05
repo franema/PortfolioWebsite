@@ -1,54 +1,32 @@
 import React from 'react'
 import "../CSS/Projects.css"
-import signUpImg from "../img/SignUpImg2.png"
-import DashboardImg from "../img/DashboardImg2.png"
-import Calculator from "../img/CalculatorImg2.png"
-import ToDoList from "../img/ToDoListImg2.png"
-import TicTacToe from "../img/TicTacToeImg2.png"
-import WelcomeEnglish from "../img/EnglishImg2.png"
+import { ProjectsData } from "../Projects/ProjectsData"
 
 function Projects() {
+
     return (
         <div className='projects-container'>
-            <div className='sign_up project'>
-                <p>Sign Up Form</p>
-                <div className='project_img'>
-                    <img src={signUpImg} alt="" />
-                </div>
-            </div>
-            <div className='dashboard project'>
-                <div className='project_img'>
-                    <img src={DashboardImg} alt="" />
-                </div>
-                <p>Admin Dashboard</p>
-            </div>
-            <div className='calculator project'>
-                <p>Calculator</p>
-                <div className='project_img'>
-                    <img src={Calculator} alt="" />
-                </div>
-            </div>
-            <div className='todo_list project'>
-                <div className='project_img'>
-                    <img src={ToDoList} alt="" />
-                </div>
-                <div>
-                    <p>To Do List</p>
-                    <p>text</p>
-                </div>
-            </div>
-            <div className='tic_tac_toe project'>
-                <p>Tic-Tac-Toe</p>
-                <div className='project_img'>
-                    <img src={TicTacToe} alt="" />
-                </div>
-            </div>
-            <div className='english_page project'>
-                <div className='project_img'>
-                    <img src={WelcomeEnglish} alt="" />
-                </div>
-                <p>Welcome English</p>
-            </div>
+            {ProjectsData.map(project => (
+                project.isLeftText ? (
+                    <div className={"project"}>
+                        <h4 className="left_text">{project.name}</h4>
+                        <div className="project_img">
+                            <a href={project.anchor} target="_blank" rel="noopener noreferrer">
+                                <img src={project.image} alt="" />
+                            </a>
+                        </div>
+                    </div>
+                ) : (
+                    <div className={"project"}>
+                        <div className="project_img">
+                            <a href={project.anchor} target="_blank" rel="noopener noreferrer">
+                                <img src={project.image} alt="" />
+                            </a>
+                        </div>
+                        <h4>{project.name}</h4>
+                    </div>
+                )
+            ))}
         </div>
     )
 }
