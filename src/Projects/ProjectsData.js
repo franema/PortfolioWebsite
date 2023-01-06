@@ -1,4 +1,4 @@
-import signUpImg from "../img/SignUpImg2.png"
+import SignUpImg from "../img/SignUpImg2.png"
 import DashboardImg from "../img/DashboardImg2.png"
 import WeatherApp from "../img/WeatherAppImg2.png"
 import ToDoList from "../img/ToDoListImg2.png"
@@ -10,7 +10,7 @@ export const ProjectsData = [
     {name:"Sign Up Form",
      isLeftText: true,
      anchor: "https://franema.github.io/Sign-up_Form/",
-     image: signUpImg},
+     image: SignUpImg},
     {name:"Admin Dashboard",
      isLeftText: false,
      anchor: "https://franema.github.io/Admin-Dashboard/",
