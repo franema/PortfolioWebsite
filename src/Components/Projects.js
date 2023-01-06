@@ -9,7 +9,10 @@ function Projects() {
             {ProjectsData.map(project => (
                 project.isLeftText ? (
                     <div className={"project"}>
-                        <h4 className="left_text">{project.name}</h4>
+                        <div className='project_txt'>
+                            <h4 className="left_text">{project.name}</h4>
+                            <p className='left_text'>Algo y algo mas y no se alguna otra cosa, ya veremos... o no</p>
+                        </div>
                         <div className="project_img">
                             <a href={project.anchor} target="_blank" rel="noopener noreferrer">
                                 <img src={project.image} alt="" />
