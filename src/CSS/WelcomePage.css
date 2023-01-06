@@ -10,10 +10,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: all 0.5s;
 }
 
 .welcome-container.hide {
-    visibility: hidden;
+    transform: translateY(-100vh);
 }
 
 .welcome {
