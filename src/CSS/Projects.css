@@ -8,7 +8,7 @@
     margin-top: 5%;
     overflow-y: scroll;
     overflow-anchor:auto;
-    max-height: 78vh;
+    max-height: 76vh;
 }
 
 .project {
@@ -17,18 +17,34 @@
     justify-content: center;
     gap: 2rem;
     width: 70%;
+    color: white;
+    padding: 2%;
+    border: 1px solid rgb(167, 166, 166);
+    border-radius: 6px;
+    background-color: rgba(49, 35, 53, 0.74);
 }
 
 .project_img {
     width: 100%;
+    transition: all 0.5s;
+}
+
+.project_img:hover {
+    box-shadow: 4px 4px 10px rgb(32, 0, 44);
 }
 
 img {
     width: 100%;
 }
 
-.left_text {
-    margin-left: auto;
+.project_txt {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.project_txt>.left_text {
+    text-align: end;
 }
 
 ::-webkit-scrollbar {
