@@ -1,9 +1,9 @@
 .projects-container {
     display: grid;
-    grid-template: repeat(6, 1fr) / 1fr;
+    grid-template: 1fr / 4fr 1fr 1fr;
     justify-items: center;
     align-items: center;
-    gap: 4rem;
+    gap: 2rem;
     padding: 2%;
     margin-top: 5%;
     overflow-y: scroll;
@@ -11,40 +11,50 @@
     max-height: 76vh;
 }
 
-.project {
-    display: grid;
-    grid-template: 1fr / 1fr 1fr ;
-    justify-content: center;
-    gap: 2rem;
-    width: 70%;
-    color: white;
-    padding: 2%;
-    border: 1px solid rgb(167, 166, 166);
-    border-radius: 6px;
-    background-color: rgba(49, 35, 53, 0.74);
+.projects-tv {
+    transform: perspective(3000px) rotateY(35deg);
+    
 }
 
-.project_img {
-    width: 100%;
-    transition: all 0.5s;
+.tv {
+    background-image: url("../img/tv-frame.png");
+    background-size: cover;
+    z-index: 100;
+    position: absolute;
+    padding: 28%;
+    top: 0px;
+    left: 0;
+    right: 0;
 }
 
-.project_img:hover {
-    box-shadow: 4px 4px 10px rgb(32, 0, 44);
-}
-
-img {
+.project-image {
+    position: relative;
+    z-index: -100;
+    border-radius: 16px;
+    padding: 5%;
     width: 100%;
 }
 
-.project_txt {
+.projects-description {
+    transform: perspective(3000px) rotateY(-45deg);
+
+}
+
+.projects-list {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1rem;
 }
 
-.project_txt>.left_text {
-    text-align: end;
+.project-anchor {
+    cursor: pointer;
+    transition: all 0.5s;
+    text-decoration: none;
+    color: black;
+}
+
+.project-anchor:hover {
+    color: white;
 }
 
 ::-webkit-scrollbar {
