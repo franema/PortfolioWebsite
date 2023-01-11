@@ -1,12 +1,44 @@
-import React from 'react'
+import React, { useState } from 'react'
 import "../CSS/Projects.css"
 import { ProjectsData } from "../Data/ProjectsData"
+import TVStatic from "../img/tv-static.gif"
 
 function Projects() {
 
+    const [projectShow, setProjectShow] = useState(TVStatic)
+
+    function setStatic() {
+        setProjectShow(TVStatic)
+    }
+
     return (
         <div className='projects-container'>
-            {ProjectsData.map(project => (
+            <div className='projects-tv'>
+                <img className='project-image' src={projectShow} alt="project screenshot" />
+                <div className='tv'></div>
+            </div>
+            <div className='projects-description'>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia, architecto!</p>
+            </div>
+            <div className='projects-list'>
+                {ProjectsData.map((project) => (
+                    <a
+                        href={project.anchor}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className='project-anchor'
+                        key={project.name}>
+                        <p
+                            onMouseEnter={() => setProjectShow(project.image)}
+                            onMouseLeave={setStatic}>
+                            {project.name}
+                        </p>
+                    </a>
+                ))}
+            </div>
+
+
+            {/* {ProjectsData.map(project => (
                 project.isLeftText ? (
                     <div className={"project"} key={project.name}>
                         <div className='project_txt'>
@@ -29,7 +61,7 @@ function Projects() {
                         <h4>{project.name}</h4>
                     </div>
                 )
-            ))}
+            ))} */}
         </div>
     )
 }
