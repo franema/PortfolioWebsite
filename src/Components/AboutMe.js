@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import Typewriter from "typewriter-effect"
 import "../CSS/About.css"
+import { Icons } from "../Data/Icons"
+
 
 function AboutMe() {
 
@@ -28,6 +30,11 @@ function AboutMe() {
         <p className={`about_txt ${show}`}>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam, autem.</p>
         <p className={`about_txt ${show}`}>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam, autem.</p>
         <p className={`about_txt ${show}`}>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam, autem.</p>
+      </div>
+      <div className='icons-container'>
+        {Icons.map((icon) => (
+          <img key={icon} src={icon} alt="" />
+        ))}
       </div>
     </div>
   )
