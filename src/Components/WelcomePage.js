@@ -19,7 +19,7 @@ function WelcomePage( {changeShowWelcome} ) {
     return () => {
       document.removeEventListener('keydown', keyDownHandler);
     };
-  }, []);
+  });
 
   function hideWelcome() {
     setHide("hide")
