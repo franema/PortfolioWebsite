@@ -1,9 +1,18 @@
 import React from 'react'
+import WelcomePage from './WelcomePage'
 
-function Home() {
+
+function Home({showWelcome, changeShowWelcome}) {
+
+ 
+
   return (
-    <div>Francisco Marin!!!
-        Es.... Dinamicooooo
+    <div>
+      {showWelcome ? (
+        <WelcomePage changeShowWelcome={changeShowWelcome}></WelcomePage>
+      ) : (
+        <p>algo</p>
+      )}
     </div>
   )
 }
