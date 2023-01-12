@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import Typewriter from "typewriter-effect"
 import "../CSS/About.css"
 import { Icons } from "../Data/Icons"
+import Random from "../img/random.jpg"
 
 
 function AboutMe() {
@@ -13,23 +14,28 @@ function AboutMe() {
   }
 
   return (
-    <div className='home_container'>
-      <div className='home_message'>
-        <h3 className="title">
-          <Typewriter
-            onInit={(typewriter) => {
-              typewriter
+    <div className='about_container'>
+      <div className='my-info-container'>
+        <div className='my-picture'>
+          <img src={Random} alt="" />
+        </div>
+        <div className='my-info'>
+          <h3 className="title">
+            <Typewriter
+              onInit={(typewriter) => {
+                typewriter
                 .typeString("Francisco Marin")
                 .pause()
                 .callFunction(showAbout)
                 .start()
-            }}>
-          </Typewriter>
-        </h3>
-        <p className={`about_txt ${show}`}>Es.... Dinamicooooo y el más hermoso del universo</p>
-        <p className={`about_txt ${show}`}>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam, autem.</p>
-        <p className={`about_txt ${show}`}>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam, autem.</p>
-        <p className={`about_txt ${show}`}>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam, autem.</p>
+              }}>
+            </Typewriter>
+          </h3>
+          <p className={`about_txt ${show}`}>Es.... Dinamicooooo y el más hermoso del universo</p>
+          <p className={`about_txt ${show}`}>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam, autem.</p>
+          <p className={`about_txt ${show}`}>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam, autem.</p>
+          <p className={`about_txt ${show}`}>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam, autem.</p>
+        </div>
       </div>
       <div className='icons-container'>
         {Icons.map((icon) => (
