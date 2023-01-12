@@ -6,9 +6,16 @@ import TVStatic from "../img/tv-static.gif"
 function Projects() {
 
     const [projectShow, setProjectShow] = useState(TVStatic)
+    const [projectDescription, setProjectDescription] = useState("")
+    const [removeDescription, setRemoveDescription] = useState("")
 
     function setStatic() {
         setProjectShow(TVStatic)
+    }
+
+    function eraseDescription() {
+        // setProjectDescription("")
+        setRemoveDescription("")
     }
 
     return (
@@ -17,8 +24,8 @@ function Projects() {
                 <img className='project-image' src={projectShow} alt="project screenshot" />
                 <div className='tv'></div>
             </div>
-            <div className='projects-description'>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia, architecto!</p>
+            <div className={`projects-description ${removeDescription}`}>
+                <p>{projectDescription}</p>
             </div>
             <div className='projects-list'>
                 {ProjectsData.map((project) => (
@@ -29,8 +36,15 @@ function Projects() {
                         className='project-anchor'
                         key={project.name}>
                         <p
-                            onMouseEnter={() => setProjectShow(project.image)}
-                            onMouseLeave={setStatic}>
+                            onMouseEnter={() => {
+                                setProjectShow(project.image)
+                                setProjectDescription(project.description)
+                                setRemoveDescription("show")
+                            }}
+                            onMouseLeave={() => {
+                                setStatic()
+                                eraseDescription()
+                            }}>
                             {project.name}
                         </p>
                     </a>
