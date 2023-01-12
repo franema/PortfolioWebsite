@@ -6,9 +6,11 @@
     gap: 2rem;
     padding: 2%;
     margin-top: 5%;
-    overflow-y: scroll;
-    overflow-anchor:auto;
+    /* overflow-y: scroll;
+    overflow-anchor:auto; */
     max-height: 76vh;
+    /* background-color: rgba(49, 35, 53, 0.74); */
+
 }
 
 .projects-tv {
@@ -37,8 +39,15 @@
 
 .projects-description {
     transform: perspective(3000px) rotateY(-45deg);
-
+    opacity: 0;
+    transition: all 0.8s;
 }
+
+.projects-description.show {
+    transform: perspective(3000px) rotateY(-45deg);
+    opacity: 1;
+}
+
 
 .projects-list {
     display: flex;
