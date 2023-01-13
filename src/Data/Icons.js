@@ -5,4 +5,4 @@ import reactIcon from "../img/icons/react.svg"
 import pythonIcon from "../img/icons/python.svg"
 import cSharpIcon from "../img/icons/c-sharp.svg"
 
-export const Icons = [htmlIcon, cssIcon, javascriptIcon, reactIcon, pythonIcon, cSharpIcon]
+export const Icons = [htmlIcon, cssIcon, javascriptIcon, reactIcon, pythonIcon, cSharpIcon, cSharpIcon, cSharpIcon, cSharpIcon, cSharpIcon]
