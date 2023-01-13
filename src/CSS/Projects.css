@@ -38,13 +38,13 @@
 }
 
 .projects-description {
-    transform: perspective(3000px) rotateY(-45deg);
+    transform: perspective(3000px) rotateY(-45deg) translateY(-100vh);
     opacity: 0;
     transition: all 0.8s;
 }
 
 .projects-description.show {
-    transform: perspective(3000px) rotateY(-45deg);
+    transform: perspective(3000px) rotateY(-45deg) translateY(0);
     opacity: 1;
 }
 
