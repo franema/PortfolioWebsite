@@ -25,7 +25,7 @@ function WelcomePage( {changeShowWelcome} ) {
     setHide("hide")
     setTimeout (() => {
       changeShowWelcome()
-    }, 1000)
+    }, 2000)
   }
 
   return (
